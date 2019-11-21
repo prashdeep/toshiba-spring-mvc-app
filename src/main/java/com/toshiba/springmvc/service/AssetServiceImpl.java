@@ -2,6 +2,7 @@ package com.toshiba.springmvc.service;
 
 import com.toshiba.springmvc.dao.AssetDAO;
 import com.toshiba.springmvc.model.Asset;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,6 +12,7 @@ public class AssetServiceImpl implements AssetService {
 
     private final AssetDAO assetDAO;
 
+    //public AssetServiceImpl(@Qualifier("inmemory") AssetDAO assetDAO)  - Using @Qualifier
     public AssetServiceImpl(AssetDAO assetDAO) {
         this.assetDAO = assetDAO;
     }
