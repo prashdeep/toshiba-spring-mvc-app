@@ -21,9 +21,11 @@
 
     <div  class="center">
 
-        <c:forEach var="asset" items="${assets}">
-
-        </c:forEach>
+        <ul>
+            <c:forEach var="asset" items="${assets}">
+                <li>Name - ${asset.name}, Price - ${asset.price} <a href="/assets/${asset.id}"> Details</a></li>
+            </c:forEach>
+            </ul>
     </div>
 
 </body>
