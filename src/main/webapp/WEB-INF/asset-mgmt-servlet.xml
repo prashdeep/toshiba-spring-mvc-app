@@ -12,6 +12,14 @@
     <!-- Equivalent to @ComponentScan inside the @Configuration class -->
     <context:component-scan base-package="com.toshiba.springmvc" />
 
-    
+
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+
+        <property name="prefix" value="/WEB-INF/jsp/" />
+
+        <property name="suffix" value=" .jsp" />
+
+    </bean>
 
 </beans>
